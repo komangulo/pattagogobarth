@@ -1,0 +1,132 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 0%;
+    --foreground: 0 0% 100%;
+
+    --card: 0 0% 0%;
+    --card-foreground: 0 0% 100%;
+
+    --popover: 0 0% 0%;
+    --popover-foreground: 0 0% 100%;
+
+    --primary: 325 100% 72%;
+    --primary-foreground: 0 0% 0%;
+
+    --secondary: 267 100% 63%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 0 0% 20%;
+    --muted-foreground: 0 0% 60%;
+
+    --accent: 325 100% 72%;
+    --accent-foreground: 0 0% 0%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 0 0% 20%;
+    --input: 0 0% 20%;
+    --ring: 325 100% 72%;
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 0 0% 0%;
+    --foreground: 0 0% 100%;
+
+    --card: 0 0% 0%;
+    --card-foreground: 0 0% 100%;
+
+    --popover: 0 0% 0%;
+    --popover-foreground: 0 0% 100%;
+
+    --primary: 325 100% 72%;
+    --primary-foreground: 0 0% 0%;
+
+    --secondary: 267 100% 63%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 0 0% 20%;
+    --muted-foreground: 0 0% 60%;
+
+    --accent: 325 100% 72%;
+    --accent-foreground: 0 0% 0%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 0 0% 20%;
+    --input: 0 0% 20%;
+    --ring: 325 100% 72%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-black text-foreground font-montserrat;
+  }
+}
+
+.neon-text {
+  @apply text-white font-bold;
+  text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px #ff71c6, 0 0 82px #ff71c6, 0 0 92px #ff71c6, 0 0 102px #ff71c6, 0 0 151px #ff71c6;
+}
+
+.neon-purple {
+  @apply text-white font-bold;
+  text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px #9b41ff, 0 0 82px #9b41ff, 0 0 92px #9b41ff, 0 0 102px #9b41ff, 0 0 151px #9b41ff;
+}
+
+.neon-green {
+  @apply text-blowketing-green font-bold;
+  text-shadow: 0 0 7px #7FFF00, 0 0 10px #7FFF00, 0 0 21px #7FFF00;
+}
+
+.neon-box {
+  box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #ff71c6, 0 0 20px #ff71c6, 0 0 25px #ff71c6, 0 0 30px #ff71c6, 0 0 35px #ff71c6;
+}
+
+.dripping-text {
+  @apply relative;
+}
+
+.dripping-text:after {
+  content: '';
+  @apply absolute bottom-[-8px] left-1/2 transform -translate-x-1/2 w-1 h-3 bg-blowketing-pink rounded-b-full animate-drip;
+}
+
+.anime-girl-bubble {
+  @apply relative;
+}
+
+.anime-girl-bubble:after {
+  content: '';
+  @apply absolute top-0 right-[-10px] w-4 h-4 bg-white transform rotate-45;
+}
+
+.dark-border-box {
+  @apply border border-gray-800 rounded-lg;
+}
+
+.button-glow {
+  animation: button-glow 2s infinite alternate;
+}
+
+@keyframes button-glow {
+  from {
+    box-shadow: 0 0 5px #ff71c6, 0 0 10px #ff71c6;
+  }
+  to {
+    box-shadow: 0 0 10px #ff71c6, 0 0 20px #ff71c6, 0 0 30px #ff71c6;
+  }
+}
